@@ -10,7 +10,7 @@ try { Remove-Item -Force -Path "C:\Program Files\dotnet\host\fxr\$version" -erro
 catch [System.Management.Automation.ItemNotFoundException] { $null }
 'Not Found Directory. Skipping...'
 
-try { Remove-Item -Force -Path "C:\Program Files\dotnet\shared\Microsoft.NETCore.App\$version" -erroraction stop }
+try { Remove-Item -Force -Path "C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\$version" -erroraction stop }
 catch [System.Management.Automation.ItemNotFoundException] { $null }
 'Not Found Directory. Skipping...'
 
