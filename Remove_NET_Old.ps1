@@ -18,6 +18,10 @@ try { Remove-Item -Force -Path "C:\Program Files\dotnet\shared\Microsoft.Windows
 catch [System.Management.Automation.ItemNotFoundException] { $null }
 'Not Found Directory. Skipping...'
 
+try { Remove-Item -Force -Path "C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\$version" -erroraction stop }
+catch [System.Management.Automation.ItemNotFoundException] { $null }
+'Not Found Directory. Skipping...'
+
 try { Remove-Item -Force -Path "C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\$version" -erroraction stop }
 catch [System.Management.Automation.ItemNotFoundException] { $null }
 'Not Found Directory. Skipping...'
